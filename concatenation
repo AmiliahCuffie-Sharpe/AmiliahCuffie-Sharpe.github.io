@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concatenation Jokes</title>
+</head>
+<body>
+
+  <h2>Joke of the Day Using Concatenation</h2>
+
+  <!-- This paragraph will display the result -->
+  <p id="output"></p>
+
+  <script>
+    // Variables with parts of the sentence
+    var questionStart = "What do";
+    var joke = "you do to have a space party?";
+    var answer = " You planet!";
+
+    // Concatenate the parts together
+    var fullSentence = questionStart + joke + answer;
+
+    // Show the sentence on the page
+    document.getElementById("output").textContent = fullSentence;
+  </script>
+
+</body>
+</html>
