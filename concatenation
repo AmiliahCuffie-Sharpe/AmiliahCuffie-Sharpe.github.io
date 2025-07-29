@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Concatenation Example</title>
-</head>
-<body>
+    <head>
+      <title>Concatenation Example</title>
+    </head>
+  <body>
 
   <h2>My Fun Sentence Using Concatenation</h2>
 
@@ -23,5 +23,5 @@
     document.getElementById("output").textContent = fullSentence;
   </script>
 
-</body>
+  </body>
 </html>
