@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kat's Cakes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Kat's Cakes Logo">
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Welcome to...</h2>
+    <h1>Kat’s Cakes</h1>
+    
+    <div class="cake-image">
+      <!-- Use your image here -->
+      <img src="cake-placeholder.png" alt="Cake image">
+    </div>
+    
+    <p class="tagline">Delicious Cakes At Your Service</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
