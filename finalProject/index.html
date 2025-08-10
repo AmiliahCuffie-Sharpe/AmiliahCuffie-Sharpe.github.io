@@ -1,37 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kat's Cakes</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kat's Cakes</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: lavender;
+    color: black;
+    text-align: center;
+  }
+
+  /* Navbar */
+  header {
+    background-color: #6c6faa;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+  }
+
+  header img {
+    width: 40px;
+    height: 40px;
+    margin-right: auto;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+  }
+
+  /* Sections */
+  section {
+    padding: 20px;
+  }
+
+  h1 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 40px;
+    margin: 5px 0;
+  }
+
+  canvas {
+    border: 1px solid #333;
+    background-color: lavender;
+    margin-top: 10px;
+  }
+
+  .tagline {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .mission {
+    font-family: "Brush Script MT", cursive;
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+  }
+
+  /* Reviews */
+  .reviews {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+  }
+
+  .review {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+
+  .review-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    flex-shrink: 0;
+  }
+
+  .review-lines {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+
+  .line {
+    height: 2px;
+    background-color: black;
+    margin: 5px 0;
+    width: 80%;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="logo.png" alt="Kat's Cakes Logo">
-      </div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Welcome to...</h2>
-    <h1>Kat’s Cakes</h1>
-    
-    <div class="cake-image">
-      <!-- Use your image here -->
-      <img src="cake-placeholder.png" alt="Cake image">
+<header>
+  <img src="logo.png" alt="Kat's Cakes Logo">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About Me</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section>
+  <h2>Welcome to...</h2>
+  <h1>Kat’s Cakes</h1>
+  <canvas id="cakeCanvas" width="250" height="180"></canvas>
+  <p class="tagline">Delicious Cakes At Your Service</p>
+</section>
+
+<!-- Mission Section -->
+<section>
+  <p class="mission">
+    Our Mission: Provide and deliver tasty sweets wherever you are. 
+    Nothing stands in our way when it comes to customers. Loyalty and beforehand 
+    arrivals is what we stand for. Disrespect and tardiness are not words in our vocabulary.
+  </p>
+  <hr>
+</section>
+
+<!-- Reviews Section -->
+<section class="reviews">
+  <h3>Check Out Our Reviews</h3>
+  <div class="review">
+    <div class="review-circle"></div>
+    <div class="review-lines">
+      <div class="line"></div>
+      <div class="line"></div>
     </div>
-    
-    <p class="tagline">Delicious Cakes At Your Service</p>
-  </main>
+  </div>
+  <div class="review">
+    <div class="review-lines">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="review-circle"></div>
+  </div>
+  <div class="review">
+    <div class="review-circle"></div>
+    <div class="review-lines">
+      <div class="line"></div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<script>
+// Draw cake on canvas
+const canvas = document.getElementById("cakeCanvas");
+const ctx = canvas.getContext("2d");
+
+function drawCakeLayer(y, color) {
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.ellipse(125, y, 100, 25, 0, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+// Layers from bottom up
+drawCakeLayer(150, "#5a3a2f"); // bottom brown
+drawCakeLayer(130, "#b45f50"); // red
+drawCakeLayer(110, "#5a3a2f"); // brown
+drawCakeLayer(90, "#7d7f6e"); // green
+drawCakeLayer(70, "#5a3a2f"); // top brown
+
+// Cross cream decoration
+ctx.fillStyle = "#e8e4d8";
+ctx.beginPath();
+ctx.ellipse(125, 70, 90, 8, 0, 0, Math.PI * 2); // horizontal
+ctx.fill();
+
+ctx.beginPath();
+ctx.ellipse(125, 70, 8, 40, 0, 0, Math.PI * 2); // vertical
+ctx.fill();
+</script>
+
 </body>
 </html>
