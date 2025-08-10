@@ -1,3 +1,4 @@
+// Draw cake on canvas
 const canvas = document.getElementById("cakeCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -8,14 +9,14 @@ function drawCakeLayer(y, color) {
   ctx.fill();
 }
 
-// Layers from bottom up
+// Cake layers
 drawCakeLayer(150, "#5a3a2f"); // bottom brown
 drawCakeLayer(130, "#b45f50"); // red
 drawCakeLayer(110, "#5a3a2f"); // brown
 drawCakeLayer(90, "#7d7f6e");  // green
 drawCakeLayer(70, "#5a3a2f");  // top brown
 
-// Cross cream decoration
+// Cream cross
 ctx.fillStyle = "#e8e4d8";
 ctx.beginPath();
 ctx.ellipse(125, 70, 90, 8, 0, 0, Math.PI * 2); // horizontal
@@ -25,7 +26,7 @@ ctx.beginPath();
 ctx.ellipse(125, 70, 8, 40, 0, 0, Math.PI * 2); // vertical
 ctx.fill();
 
-// Navigation between sections
+// Navigation logic
 const buttons = document.querySelectorAll(".nav-btn");
 const sections = document.querySelectorAll(".page-section");
 
