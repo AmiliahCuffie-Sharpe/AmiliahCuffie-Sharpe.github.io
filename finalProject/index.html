@@ -1,96 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kat's Cakes</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kat's Cakes</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="Kat's Cakes Logo">
-  <nav>
-    <button class="nav-btn" data-section="home">Home</button>
-    <button class="nav-btn" data-section="about">About Me</button>
-    <button class="nav-btn" data-section="reviews">Reviews</button>
-  </nav>
+<header class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" alt="Logo" width="40" height="40">
+  </a>
+  <div class="navbar-nav ms-auto">
+    <button class="btn btn-light mx-1 nav-btn" data-section="home">Home</button>
+    <button class="btn btn-light mx-1 nav-btn" data-section="about">About Me</button>
+    <button class="btn btn-light mx-1 nav-btn" data-section="reviews">Reviews</button>
+  </div>
 </header>
 
-<!-- Home Section -->
+<!-- Home -->
 <section id="home" class="page-section">
-  <h2>Welcome to...</h2>
-  <h1>Kat’s Cakes</h1>
-  <canvas id="cakeCanvas" width="250" height="180"></canvas>
-  <p class="tagline">Delicious Cakes At Your Service</p>
+  <h1>Welcome to Kat's Cakes</h1>
+  <canvas id="cakeCanvas" width="250" height="200"></canvas>
+  <p class="tagline">Delicious cakes for every occasion!</p>
 </section>
 
-<!-- About Me Section -->
-<section id="about" class="page-section hidden about-section">
-  <h1>👋 Hi, I'm Amiliah Cuffie-Sharpe!</h1>
+<!-- About Me -->
+<section id="about" class="page-section hidden">
+  <div class="about-section">
+    <h1>👋 Hi, I'm Amiliah Cuffie-Sharpe!</h1>
+    <h2>🚀 About Me</h2>
+    <p>
+      I'm an aspiring developer who loves combining creativity with problem-solving.  
+      My journey into coding started from a simple curiosity about how websites work,  
+      and now I’m actively learning HTML, CSS, JavaScript, and Python.  
+    </p>
+    <p>
+      I also enjoy designing with Figma, experimenting with Bootstrap, and building responsive layouts.  
+      Outside of coding, I love baking — hence my cake-themed projects!
+    </p>
+    <p>
+      Want to learn more? Check out my 
+      <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub README</a>.
+    </p>
 
-  <h2>🚀 About Me</h2>
-  <p>I'm an aspiring developer who loves coding.<br>
-  Currently working on HTML and CSS.<br>
-  Always learning more about JavaScript and Python.</p>
+    <h2>🛠️ Skills</h2>
+    <ul>
+      <li>Languages: JavaScript | Python | HTML | CSS</li>
+      <li>Tools: Bootstrap | Figma | Flexbox | GitHub | Replit</li>
+    </ul>
 
-  <h2>Introduction</h2>
-  <p>
-    To me, coding is more than just writing lines of instructions, it’s a form of expression, problem-solving, and continuous learning. 
-    It gives me the ability to turn ideas into real, functioning tools and to build something meaningful from nothing but logic and creativity. 
-    Coding challenges me to think critically, adapt to new concepts, and embrace failure as part of the growth process. 
-    It’s empowering to know that with enough persistence and curiosity, I can create solutions, automate tasks, or even build something that helps others. 
-    Ultimately, coding feels like having a superpower—one that unlocks endless possibilities in the digital world.
-  </p>
+    <h2>Goals</h2>
+    <ul>
+      <li>Contribute to an open-source project</li>
+      <li>Build portfolio projects that showcase my skills</li>
+      <li>Master JavaScript DOM interactions</li>
+    </ul>
 
-  <h2>🛠️ Skills</h2>
-  <ul>
-    <li>Languages: <code>JavaScript</code> | <code>Python</code> | <code>HTML</code> | <code>CSS</code></li>
-    <li>Tools: Bootstrap | Figma | Flexbox | GitHub | Replit</li>
-  </ul>
-
-  <h2>Goals</h2>
-  <ul>
-    <li>Contribute to an open-source project</li>
-    <li>Learn version control using Git and GitHub</li>
-    <li>Build 2–3 portfolio projects to showcase skills</li>
-    <li>Understand basic data structures and algorithms</li>
-    <li>Apply for internships or junior developer roles</li>
-  </ul>
-
-  <h2>Career Path</h2>
-  <p>
-    Coding within computer science is the practice of designing, writing, testing, and maintaining the software that powers everything from mobile apps to large-scale systems. 
-    It involves turning complex problems into logical solutions using programming languages like Python, JavaScript, or C++. 
-    A career in coding blends creativity with analytical thinking, allowing professionals to build applications, automate tasks, and contribute to cutting-edge technologies like artificial intelligence, cybersecurity, and data science. 
-    As technology continues to evolve, coding remains a foundational skill in shaping the digital world and solving real-world challenges through innovation.
-  </p>
+    <!-- Feedback -->
+    <div class="feedback mt-4">
+      <h2>💬 Leave Your Feedback</h2>
+      <textarea id="feedbackText" class="form-control mb-2" placeholder="Type your feedback here..."></textarea>
+      <button id="submitFeedback" class="btn btn-success">Submit</button>
+      <p id="feedbackMessage" class="hidden mt-2">✅ Thank you for your feedback!</p>
+    </div>
+  </div>
 </section>
 
-<!-- Reviews Section -->
+<!-- Reviews -->
 <section id="reviews" class="page-section hidden">
-  <h3>Check Out Our Reviews</h3>
-  <div class="review">
-    <div class="review-circle"></div>
-    <div class="review-lines">
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-  </div>
-  <div class="review">
-    <div class="review-lines">
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <div class="review-circle"></div>
-  </div>
-  <div class="review">
-    <div class="review-circle"></div>
-    <div class="review-lines">
-      <div class="line"></div>
-    </div>
+  <div class="reviews">
+    <h2>User Reviews</h2>
+    <ul id="reviewList" class="list-group"></ul>
   </div>
 </section>
+
+<!-- Back to Top -->
+<button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-3 hidden">⬆ Back to Top</button>
 
 <script src="script.js"></script>
 </body>
