@@ -6,59 +6,14 @@ body {
   text-align: center;
 }
 
-/* Navbar */
-header {
-  background-color: #6c6faa;
-  display: flex;
-  align-items: center;
-  padding: 5px 20px;
-}
-
-header img {
-  width: 40px;
-  height: 40px;
-  margin-right: auto;
-}
-
-nav {
-  display: flex;
-  gap: 10px;
-}
-
-.nav-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.nav-btn:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
-section {
+.page-section {
   padding: 20px;
-  opacity: 1; /* NEW */
-  transition: opacity 0.5s ease; /* NEW */
+  transition: opacity 0.5s ease;
 }
 
-h1 {
-  font-family: "Brush Script MT", cursive;
-  font-size: 40px;
-  margin: 5px 0;
-}
-
-canvas {
-  border: 1px solid #333;
-  background-color: lavender;
-  margin-top: 10px;
-}
-
-.tagline {
-  font-size: 18px;
-  margin-top: 10px;
+.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .about-section {
@@ -67,51 +22,10 @@ canvas {
   text-align: left;
 }
 
-.about-section h1, .about-section h2 {
-  text-align: left;
-  font-family: Arial, sans-serif;
+.feedback textarea {
+  resize: vertical;
 }
 
-.about-section p, .about-section ul {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Reviews */
-.reviews {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
-}
-
-.review {
-  display: flex;
-  align-items: center;
-  margin: 15px 0;
-}
-
-.review-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #c4c4c4;
-  flex-shrink: 0;
-}
-
-.review-lines {
-  flex-grow: 1;
-  margin-left: 10px;
-}
-
-.line {
-  height: 2px;
-  background-color: black;
-  margin: 5px 0;
-  width: 80%;
-}
-
-/* Hide/Show with Fade */
-.hidden {
-  opacity: 0; /* NEW */
-  pointer-events: none; /* NEW */
+#backToTop {
+  z-index: 1000;
 }
