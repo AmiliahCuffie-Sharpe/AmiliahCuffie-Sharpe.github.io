@@ -26,19 +26,25 @@ ctx.beginPath();
 ctx.ellipse(125, 70, 8, 40, 0, 0, Math.PI * 2); // vertical
 ctx.fill();
 
-// Navigation logic
+// Navigation fade logic
 const buttons = document.querySelectorAll(".nav-btn");
 const sections = document.querySelectorAll(".page-section");
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
     const target = button.getAttribute("data-section");
-    sections.forEach(section => {
-      if (section.id === target) {
-        section.classList.remove("hidden");
-      } else {
-        section.classList.add("hidden");
-      }
-    });
+
+    // Fade out current section
+    const activeSection = document.querySelector(".page-section:not(.hidden)");
+    activeSection.classList.add("hidden");
+
+    // Wait for fade-out before switching
+    setTimeout(() => {
+      sections.forEach(section => {
+        if (section.id === target) {
+          section.classList.remove("hidden");
+        }
+      });
+    }, 500); // match CSS transition time
   });
 });
