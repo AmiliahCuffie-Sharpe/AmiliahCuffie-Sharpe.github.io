@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<!-- Navbar -->
 <header class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
   <a class="navbar-brand" href="#">
     <img src="logo.png" alt="Logo" width="40" height="40">
@@ -18,6 +19,7 @@
     <button class="btn btn-light mx-1 nav-btn" data-section="home">Home</button>
     <button class="btn btn-light mx-1 nav-btn" data-section="about">About Me</button>
     <button class="btn btn-light mx-1 nav-btn" data-section="reviews">Reviews</button>
+    <button class="btn btn-light mx-1 nav-btn" data-section="contact">Contact</button>
   </div>
 </header>
 
@@ -26,11 +28,6 @@
   <h1>Welcome to Kat's Cakes</h1>
   <canvas id="cakeCanvas" width="250" height="200"></canvas>
   <p class="tagline">Delicious cakes for every occasion!</p>
-  <p class="mission">
-    Our Mission: Provide and deliver tasty sweets wherever you are. 
-    Nothing stands in our way when it comes to customers. Loyalty and beforehand 
-    arrivals is what we stand for. Disrespect and tardiness are not words in our vocabulary.
-  </p>
 </section>
 
 <!-- About Me -->
@@ -40,7 +37,7 @@
     <h2>🚀 About Me</h2>
     <p>
       I'm an aspiring developer who loves combining creativity with problem-solving.  
-      My journey into coding started from a simple curiosity about how websites work,  
+      My journey into coding started from curiosity about how websites work,  
       and now I’m actively learning HTML, CSS, JavaScript, and Python.  
     </p>
     <p>
@@ -49,23 +46,57 @@
     </p>
     <p>
       Want to learn more? Check out my 
-      <a href="https://github.com/AmiliahCuffie-Sharpe/AmiliahCuffie-Sharpe">GitHub README</a>.
+      <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub README</a>.
     </p>
+
+    <h2>🛠️ Skills</h2>
+    <ul>
+      <li>Languages: JavaScript | Python | HTML | CSS</li>
+      <li>Tools: Bootstrap | Figma | Flexbox | GitHub | Replit</li>
+    </ul>
+
+    <h2>Goals</h2>
+    <ul>
+      <li>Contribute to an open-source project</li>
+      <li>Build portfolio projects that showcase my skills</li>
+      <li>Master JavaScript DOM interactions</li>
+    </ul>
   </div>
 </section>
 
 <!-- Reviews -->
 <section id="reviews" class="page-section hidden">
-  <div class="reviews">
+  <div class="reviews container">
     <h2>User Reviews</h2>
-    <ul id="reviewList" class="list-group"></ul>
-  <!-- Feedback -->
-    <div class="feedback mt-4">
-      <h2>💬 Leave Your Feedback</h2>
-      <textarea id="feedbackText" class="form-control mb-2" placeholder="Type your feedback here..."></textarea>
-      <button id="submitFeedback" class="btn btn-success">Submit</button>
-      <p id="feedbackMessage" class="hidden mt-2">✅ Thank you for your feedback!</p>
-    </div>
+    <ul id="reviewList" class="list-group mb-3"></ul>
+
+    <h3>💬 Leave Your Feedback</h3>
+    <textarea id="feedbackText" class="form-control mb-2" placeholder="Type your feedback here..."></textarea>
+    <button id="submitFeedback" class="btn btn-success">Submit</button>
+    <p id="feedbackMessage" class="hidden mt-2">✅ Thank you for your feedback!</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="page-section hidden">
+  <div class="container">
+    <h2>📩 Contact Us</h2>
+    <form id="contactForm" class="mt-3">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" class="form-control" placeholder="Your message..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <p id="contactMessage" class="hidden mt-3">✅ Your message has been sent! We'll get back to you soon.</p>
   </div>
 </section>
 
