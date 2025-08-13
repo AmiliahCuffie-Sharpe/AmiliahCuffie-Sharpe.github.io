@@ -39,7 +39,7 @@ buttons.forEach(button => {
   });
 });
 
-// Feedback
+// Feedback system
 const feedbackText = document.getElementById("feedbackText");
 const feedbackButton = document.getElementById("submitFeedback");
 const feedbackMessage = document.getElementById("feedbackMessage");
@@ -49,9 +49,11 @@ feedbackButton.addEventListener("click", () => {
   const text = feedbackText.value.trim();
   if (text) {
     const li = document.createElement("li");
-    li.classList.add("list-group-item");
+    li.classList.add("list-group-item", "bg-warning");
     li.textContent = text;
     reviewList.appendChild(li);
+
+    setTimeout(() => li.classList.remove("bg-warning"), 2000);
 
     feedbackMessage.classList.remove("hidden");
     feedbackText.value = "";
@@ -61,7 +63,18 @@ feedbackButton.addEventListener("click", () => {
   }
 });
 
-// Back to Top button
+// Contact form
+const contactForm = document.getElementById("contactForm");
+const contactMessage = document.getElementById("contactMessage");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  contactMessage.classList.remove("hidden");
+  contactForm.reset();
+  setTimeout(() => contactMessage.classList.add("hidden"), 4000);
+});
+
+// Back to Top
 const backToTopBtn = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
