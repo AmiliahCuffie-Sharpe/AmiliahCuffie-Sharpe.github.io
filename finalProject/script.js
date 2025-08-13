@@ -35,7 +35,7 @@ buttons.forEach(button => {
       sections.forEach(section => {
         if (section.id === target) section.classList.remove("hidden");
       });
-    }, 500);
+    });
   });
 });
 
