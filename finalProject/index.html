@@ -81,27 +81,32 @@
 </body>
 
 <!-- Contact -->
-<section id="contact" class="page-section hidden">
-  <div class="container">
-    <h2>📩 Contact Us</h2>
-    <form id="contactForm" class="mt-3">
+  <main class="container py-4">
+    <h1>Contact Us</h1>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <!-- Name -->
       <div class="mb-3">
-        <label for="name" class="form-label">Your Name</label>
-        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+        <label for="name" class="form-label">Your Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
       </div>
+
+      <!-- Email -->
       <div class="mb-3">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        <label for="email" class="form-label">Your Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
       </div>
+
+      <!-- Message -->
       <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea id="message" class="form-control" placeholder="Your message..." required></textarea>
+        <label for="message" class="form-label">Your Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
       </div>
+
+      <!-- Submit Button -->
       <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
-    <p id="contactMessage" class="hidden mt-3">✅ Your message has been sent! We'll get back to you soon.</p>
-  </div>
-</section>
+  </main>
+</body>
 
 <!-- Back to Top -->
 <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-3 hidden">⬆ Back to Top</button>
