@@ -33,7 +33,7 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-  background-color: #222 !important;
+  background-color: #222;
 }
 
 body.dark-mode .btn-light {
