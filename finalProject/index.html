@@ -1,31 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kat's Cakes - Home</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kat's Cakes — Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <nav>
+  <!-- Navbar -->
+  <div class="header">
+    <div class="nav">
+      <img src="logo.png" alt="Kat's Cakes logo" class="logo">
+      <div class="navlinks">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
         <a href="reviews.html">Reviews</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+        <span class="sun">☀️</span><span class="moon">🌙</span>
+      </button>
+    </div>
+  </div>
 
-<div class="container">
-    <h2>Welcome to...</h2>
-    <h1>Kat’s Cakes</h1>
-    <img src="cake.png" alt="Cake Logo" class="logo">
-    <p>Delicious Cakes At Your Service</p>
-    <hr>
-    <p><em>Our Mission:</em> Provide and deliver tasty sweets wherever you are. Nothing stands in our way when it comes to customers. Loyalty and beforehand arrival is what we stand for. Disrespect and tardiness are not words in our vocabulary.</p>
-</div>
+  <!-- Main hero -->
+  <div class="container" style="text-align:center;">
+    <h2 class="eyebrow">Welcome to…</h2>
+    <h1 class="site-title">Kat’s Cakes</h1>
 
-<button id="toggleMode" class="toggle-btn">Toggle Mode</button>
-<script src="script.js"></script>
+    <div class="hero-figure">
+      <img src="logo.png" alt="Cake logo">
+    </div>
+
+    <p class="tagline">Delicious Cakes At Your Service</p>
+  </div>
+
+  <!-- Mission (matches your screenshot wording) -->
+  <div class="container">
+    <h2 class="eyebrow" style="text-align:left;margin-bottom:6px;">Our Mission</h2>
+    <hr class="section-divider">
+    <p class="mission">
+      Provide and deliver tasty sweets wherever you are. Nothing stands in our way when it comes to customers.
+      Loyalty and beforehand arrivals is what we stand for. Disrespect and tardiness are not words in our vocabulary.
+    </p>
+  </div>
+
+  <div class="footer">© <span id="y"></span> Kat’s Cakes</div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
