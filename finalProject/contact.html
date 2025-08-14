@@ -1,28 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Kat's Cakes</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kat's Cakes — Contact</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <nav>
+  <div class="header">
+    <div class="nav">
+      <img src="logo.png" alt="Kat's Cakes logo" class="logo">
+      <div class="navlinks">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
         <a href="reviews.html">Reviews</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+        <span class="sun">☀️</span><span class="moon">🌙</span>
+      </button>
+    </div>
+  </div>
 
-<div class="container">
-    <h1>Contact Us</h1>
-    <p>Email: <a href="mailto:katscakes@example.com">katscakes@example.com</a></p>
-    <p>Phone: (123) 456-7890</p>
-</div>
+  <div class="container">
+    <h1 class="site-title" style="font-size:48px;">Contact Us</h1>
+    <div class="contact-grid">
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! Your message has been noted.'); this.reset();">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your cake order or question…" required></textarea>
+        </div>
+        <button class="submit" type="submit">Send Message</button>
+      </form>
 
-<button id="toggleMode" class="toggle-btn">Toggle Mode</button>
-<script src="script.js"></script>
+      <p style="text-align:center;margin-top:10px;">
+        Prefer email? <a href="mailto:katscakes@example.com">katscakes@example.com</a><br>
+        Or call: (123) 456-7890
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">© <span id="y"></span> Kat’s Cakes</div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
 </body>
 </html>
