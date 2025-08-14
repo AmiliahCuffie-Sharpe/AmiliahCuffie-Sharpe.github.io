@@ -22,3 +22,18 @@
     if (href === file) a.classList.add("active");
   });
 })();
+
+// Apply saved theme on load
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+}
+
+// Toggle mode and save choice
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
