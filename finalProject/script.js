@@ -1,39 +1,24 @@
-// ==== Theme toggle with persistence ====
-(function () {
-  const key = "katsTheme";
-  const saved = localStorage.getItem(key);
-  if (saved === "dark") document.body.classList.add("dark");
+// Get button
+const modeToggle = document.getElementById("modeToggle");
 
-  const btn = document.querySelector(".theme-toggle");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      localStorage.setItem(key, document.body.classList.contains("dark") ? "dark" : "light");
-    });
-  }
-})();
+// Load saved mode or default to light
+const savedMode = localStorage.getItem("mode") || "light";
+document.body.classList.add(savedMode + "-mode");
+updateButtonIcon(savedMode);
 
-// ==== Active nav highlighting ====
-(function () {
-  // Determine current file (default to index.html if empty)
-  const file = location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".navlinks a").forEach(a => {
-    const href = a.getAttribute("href");
-    if (href === file) a.classList.add("active");
-  });
-})();
-
-// Apply saved theme on load
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark-mode");
-}
-
-// Toggle mode and save choice
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  if (body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark");
+// Toggle mode
+modeToggle.addEventListener("click", () => {
+  if (document.body.classList.contains("light-mode")) {
+    document.body.classList.replace("light-mode", "dark-mode");
+    localStorage.setItem("mode", "dark");
+    updateButtonIcon("dark");
   } else {
-    localStorage.setItem("theme", "light");
+    document.body.classList.replace("dark-mode", "light-mode");
+    localStorage.setItem("mode", "light");
+    updateButtonIcon("light");
   }
 });
+
+function updateButtonIcon(mode) {
+  modeToggle.textContent = mode === "light" ? "🌙" : "☀️";
+}
