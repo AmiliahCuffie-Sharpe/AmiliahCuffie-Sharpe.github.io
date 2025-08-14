@@ -1,33 +1,24 @@
-const body = document.body;
-const toggleBtn = document.getElementById("toggleMode");
+// ==== Theme toggle with persistence ====
+(function () {
+  const key = "katsTheme";
+  const saved = localStorage.getItem(key);
+  if (saved === "dark") document.body.classList.add("dark");
 
-// Apply saved theme on load
-if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-}
-
-// Toggle mode and save choice
-toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-    } else {
-        localStorage.setItem("theme", "light");
-    }
-});
-
-// Fade-in animation on scroll
-const sections = document.querySelectorAll(".fade-section");
-
-const revealOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < triggerBottom) {
-            section.classList.add("visible");
-        }
+  const btn = document.querySelector(".theme-toggle");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem(key, document.body.classList.contains("dark") ? "dark" : "light");
     });
-};
+  }
+})();
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+// ==== Active nav highlighting ====
+(function () {
+  // Determine current file (default to index.html if empty)
+  const file = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".navlinks a").forEach(a => {
+    const href = a.getAttribute("href");
+    if (href === file) a.classList.add("active");
+  });
+})();
