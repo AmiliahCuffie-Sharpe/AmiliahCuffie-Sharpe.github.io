@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kat's Cakes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="container fade-section">
+    <h2>Welcome to...</h2>
+    <h1>Kat’s Cakes</h1>
+    <img src="cake.png" alt="Cake Logo" class="logo">
+    <p>Delicious Cakes At Your Service</p>
+    <hr>
+    <p><em>Our Mission:</em> Provide and deliver tasty sweets wherever you are. Nothing stands in our way when it comes to customers. Loyalty and beforehand arrival is what we stand for. Disrespect and tardiness are not words in our vocabulary.</p>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="container fade-section">
+    <h1>About Me</h1>
+    <h2>👋 Hi, I'm Amiliah Cuffie-Sharpe!</h2>
+    <p>
+      I'm an aspiring developer who loves combining creativity with problem-solving.
+      My journey into coding started from curiosity about how websites work,
+      and now I’m actively learning HTML, CSS, JavaScript, and Python.
+    </p>
+    <p>
+      I also enjoy designing with Figma, experimenting with Bootstrap, and building responsive layouts.
+      Outside of coding, I love baking — hence my cake-themed projects!
+    </p>
+    <p>
+      Want to learn more? Check out my
+      <a href="https://github.com/AmiliahCuffie-Sharpe/AmiliahCuffie-Sharpe" target="_blank">GitHub README</a>.
+    </p>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="container fade-section">
+    <h1>Customer Reviews</h1>
+    <div class="review">
+      <div class="review-circle"></div>
+      <div class="review-text"><strong>Emily R.</strong>: "Absolutely the best cake I’ve ever had. Soft, moist, and flavorful!"</div>
+    </div>
+    <div class="review">
+      <div class="review-circle"></div>
+      <div class="review-text"><strong>Michael T.</strong>: "Kat delivered on time and the cake was still warm. Incredible service!"</div>
+    </div>
+    <div class="review">
+      <div class="review-circle"></div>
+      <div class="review-text"><strong>Sarah W.</strong>: "Beautiful design and taste to match. Highly recommend Kat’s Cakes!"</div>
+    </div>
+    <form>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Please Leave a Review</label>
+        <textarea class="form-control" id="message" row="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container fade-section">
+    <h1>Contact Us</h1>
+    <p>Email: <a href="mailto:katscakes@example.com">katscakes@example.com</a></p>
+    <p>Phone: (123) 456-7890</p>
+    <form>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea class="form-control" id="message" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </section>
+
+  <!-- Dark/Light Toggle -->
+  <button id="toggleMode" class="toggle-btn">Toggle Mode</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
