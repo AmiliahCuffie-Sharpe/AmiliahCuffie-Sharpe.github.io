@@ -7,32 +7,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">
-    <div class="nav">
-      <img src="logo.png" alt="Kat's Cakes logo" class="logo">
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <button class="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
-        <span class="sun">☀️</span><span class="moon">🌙</span>
-      </button>
+  <header class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+    <a class="navbar-brand" href="index.html">🍰 Kat's Cakes</a>
+    <div class="navbar-nav ms-auto">
+      <a class="btn btn-light mx-1" href="index.html">Home</a>
+      <a class="btn btn-light mx-1" href="about.html">About Me</a>
+      <a class="btn btn-light mx-1" href="reviews.html">Reviews</a>
+      <a class="btn btn-light mx-1" href="contact.html">Contact</a>
+      <button id="themeToggle" class="btn btn-warning mx-1">🌙 Dark Mode</button>
     </div>
-  </div>
+  </header>
 
-  <div class="container">
-    <h1 class="site-title" style="font-size:52px;">About Me</h1>
-    <p style="max-width:720px;margin:0 auto;line-height:1.8;">
-      Hi, I’m Kat! I’ve been baking since I was little, and I turned my passion into a small business.
-      Every cake is baked with love using fresh ingredients and careful attention to detail.
-      I believe every occasion deserves something sweet and memorable—delivered on time, every time.
-    </p>
-  </div>
+  <!-- Content at the top -->
+  <main class="container py-4">
+    <h1>👋 Hi, I'm Amiliah Cuffie-Sharpe!</h1>
+    <h2>🚀 About Me</h2>
+    <p>I'm an aspiring developer who loves coding.  
+    Currently working on HTML and CSS.  
+    Always learning more about JavaScript and Python.</p>
 
-  <div class="footer">© <span id="y"></span> Kat’s Cakes</div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  <script src="script.js"></script>
+    <h2>Introduction</h2>
+    <p>To me, coding is more than just writing lines of instructions, it’s a form of expression, problem-solving, and continuous learning...</p>
+  </main>
 </body>
-</html>
