@@ -1,27 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me - Kat's Cakes</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kat's Cakes — About Me</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <nav>
+  <div class="header">
+    <div class="nav">
+      <img src="logo.png" alt="Kat's Cakes logo" class="logo">
+      <div class="navlinks">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
         <a href="reviews.html">Reviews</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+        <span class="sun">☀️</span><span class="moon">🌙</span>
+      </button>
+    </div>
+  </div>
 
-<div class="container">
-    <h1>About Me</h1>
-    <p>Hi, I’m Kat! I’ve been baking since I was a little girl, and I turned my passion into a business. Every cake I make is baked with love, using only the freshest ingredients. I believe that every occasion deserves something sweet and memorable.</p>
-</div>
+  <div class="container">
+    <h1 class="site-title" style="font-size:52px;">About Me</h1>
+    <p style="max-width:720px;margin:0 auto;line-height:1.8;">
+      Hi, I’m Kat! I’ve been baking since I was little, and I turned my passion into a small business.
+      Every cake is baked with love using fresh ingredients and careful attention to detail.
+      I believe every occasion deserves something sweet and memorable—delivered on time, every time.
+    </p>
+  </div>
 
-<button id="toggleMode" class="toggle-btn">Toggle Mode</button>
-<script src="script.js"></script>
+  <div class="footer">© <span id="y"></span> Kat’s Cakes</div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
 </body>
 </html>
